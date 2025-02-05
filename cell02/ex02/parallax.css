@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: xx-large;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(246, 255, 0);
+}
+
+.parallax {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.content {
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    font-size: xx-large;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax:first-of-type {
+    background-image: url('https://cdn.oneesports.gg/cdn-data/2024/03/HonkaiStarRail_Acheron_Aventurine_Version21_KeyVisual-1024x576.jpg');
+}
+
+.parallax:last-of-type {
+    background-image: url('https://www.pockettactics.com/wp-content/sites/pockettactics/2023/12/Honkai-Star-Rail-Aventurine-1.jpg');
+}
