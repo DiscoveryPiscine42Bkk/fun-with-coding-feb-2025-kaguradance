@@ -55,21 +55,33 @@
             let operator = document.getElementById('operator').value;
             let result;
 
-            if (isNaN(firstNum) || isNaN(secondNum) || firstNum < 0 || secondNum < 0) {
-                alert('Error :(');
-                console.log('Error :(');
-                return;
-            }
-
             switch (operator) {
                 case '+':
-                    result = firstNum + secondNum;
+                    if (isNaN(firstNum) || isNaN(secondNum) || firstNum < 0 || secondNum < 0) {
+                        alert('Error :(');
+                        console.log('Error :(');
+                        return;
+                    } else {
+                        result = firstNum + secondNum;
+                    }
                     break;
                 case '-':
-                    result = firstNum - secondNum;
+                    if (isNaN(firstNum) || isNaN(secondNum) || firstNum < 0 || secondNum < 0) {
+                        alert('Error :(');
+                        console.log('Error :(');
+                        return;
+                    } else {
+                        result = firstNum - secondNum;
+                    }
                     break;
                 case '*':
-                    result = firstNum * secondNum;
+                    if (isNaN(firstNum) || isNaN(secondNum) || firstNum < 0 || secondNum < 0) {
+                        alert('Error :(');
+                        console.log('Error :(');
+                        return;
+                    } else {
+                        result = firstNum * secondNum;
+                    }
                     break;
                 case '/':
                     if (secondNum == 0) {
