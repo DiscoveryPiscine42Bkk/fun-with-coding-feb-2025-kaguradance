@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" id="ft_num" placeholder="first num" required>
+        <select name="operator" id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="sd_num" placeholder="second num" required>
+        <button type="button" id="button" onclick="calculate()">Try me!</button>
+    </div>
+
+    <script>
+        let inactivityTimer;
+
+        document.getElementById('ft_num').addEventListener('input', resetInactivityTimer);
+        document.getElementById('sd_num').addEventListener('input', resetInactivityTimer);
+        document.getElementById('operator').addEventListener('change', resetInactivityTimer);
+        document.getElementById('button').addEventListener('click', resetInactivityTimer);
+
+        function timeoutAlert() {
+            alert("Please, use me...");
+        }
+
+        function resetInactivityTimer() {
+            clearTimeout(inactivityTimer);
+            inactivityTimer = setTimeout(timeoutAlert, 30000);
+        }
+
+        resetInactivityTimer();
+
+        function calculate() {
+            let firstNum = parseFloat(document.getElementById('ft_num').value);
+            let secondNum = parseFloat(document.getElementById('sd_num').value);
+            let operator = document.getElementById('operator').value;
+            let result;
+
+            if (isNaN(firstNum) || isNaN(secondNum) || firstNum < 0 || secondNum < 0) {
+                alert('Error :(');
+                console.log('Error :(');
+                return;
+            }
+
+            switch (operator) {
+                case '+':
+                    result = firstNum + secondNum;
+                    break;
+                case '-':
+                    result = firstNum - secondNum;
+                    break;
+                case '*':
+                    result = firstNum * secondNum;
+                    break;
+                case '/':
+                    if (secondNum == 0) {
+                        alert('It’s over 9000!');
+                        console.log('It’s over 9000!');
+                        return;
+                    } else {
+                        result = firstNum / secondNum;
+                    }
+                    break;
+                case '%':
+                    if (secondNum == 0) {
+                        alert('It’s over 9000!');
+                        console.log('It’s over 9000!');
+                        return;
+                    } else {
+                        result = firstNum % secondNum;
+                    }
+                    break;
+                default:
+                    alert("Invalid operator.");
+                    return;
+            }
+
+            alert('Result is ' + result);
+            console.log('Result is ' + result);
+        }
+    </script>
+
+</body>
+
+</html>
