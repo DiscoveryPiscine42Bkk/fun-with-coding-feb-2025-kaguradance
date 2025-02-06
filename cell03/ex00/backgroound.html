@@ -9,17 +9,13 @@
 </head>
 
 <body>
-    <button class="btn">Click me!</button>
-
-    <script>
-        let colors = ['red', 'green', 'yellow']
-        let currentColor = 0
-
-        document.querySelector('.btn').addEventListener('click', function () {
-            currentColor = (currentColor + 1) % colors.length;
-            document.body.style.backgroundColor = colors[currentColor];
-        });
-    </script>
+    <button onclick="changeBG()">Clickme!</button>
 </body>
+
+<script>
+    function changeBG() {
+        document.body.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16)
+    }
+</script>
 
 </html>
