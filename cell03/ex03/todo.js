@@ -25,10 +25,10 @@ function addToDoItem(text) {
     toDoItem.textContent = text;
 
     const ftList = document.getElementById('ft_list');
-    ftList.insertBefore(toDoItem, ftList.firstChild);
+    ftList.appendChild(toDoItem);
 
     toDoItem.addEventListener('click', function() {
-        const confirmation = confirm('ต้องการลบ To-Do นี้ไหม?');
+        const confirmation = confirm('Wanna delete this To-Do?');
         if (confirmation) {
             toDoItem.remove();
             saveToDoList();
