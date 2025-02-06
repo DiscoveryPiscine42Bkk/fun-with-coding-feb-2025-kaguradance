@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-    margin: 1rem;
+    margin: 1rem 1rem 0 1rem;
     text-align: center;
 }
 
@@ -45,7 +45,7 @@ h2 {
 }
 
 .profile {
-    margin: 1rem;
+    margin: 0 1rem;
     height: auto;
     width: 300px;
     display: flex;
@@ -72,4 +72,9 @@ img {
     align-items: center;
     justify-content: center;
     font-family: "Monospace", Courier New;
+    cursor: pointer;
+}
+
+.contact:active {
+    background-color: gray;
 }
