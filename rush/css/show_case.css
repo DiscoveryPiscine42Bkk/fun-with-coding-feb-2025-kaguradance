@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.show_case {
+    background-color: rgb(218, 210, 255);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.show_case h1 {
+    margin: 3rem;
+    text-align: center;
+}
+
+.certificate, .project {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.certificate {
+    margin: 2rem 0;
+    border-right: 2px solid rgb(73, 61, 158);
+}
+
+.project {
+    margin: 2rem 0;
+    border-left: 2px solid rgb(73, 61, 158);
+}
+
+.show_case_pic {
+    display: flex;
+    flex-direction: column; /* จัดรูปเรียงลง */
+    align-items: center; /* จัดตรงกลางแนวตั้ง */
+    justify-content: center; /* จัดตรงกลางแนวนอน */
+}
+
+.show_case_pic img {
+    display: flex;
+    width: 300px;
+    margin: 1rem;
+    transition: transform 0.1s ease-in-out;
+}
+
+.show_case_pic img:hover {
+    transform: scale(1.4);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
